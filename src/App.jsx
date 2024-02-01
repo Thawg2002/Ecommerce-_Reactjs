@@ -4,6 +4,8 @@ import Header from "./components/Header";
 import Sidebar from "./components/Sidebar";
 import DashboardPage from "./pages/admin/dashboard";
 import ProductPage from "./pages/admin/product";
+import LayoutAdmin from "./components/layouts/layoutAdmin";
+import LayoutWebsite from "./components/layouts/layoutWebsite";
 import {
   addProducts,
   getProducts,
@@ -13,8 +15,10 @@ import {
 import { ToastContainer, toast } from "react-toastify";
 import ProductAddPage from "./pages/admin/product-add";
 import ProductEditPage from "./pages/admin/product-edit";
+import Overview from "./pages/Clients/Overview";
+import ProductWebsite from "./pages/Clients/ProductWebsite";
 
-function App() {  
+function App() {
   const [products, setProducts] = useState([]);
   useEffect(() => {
     const fetchData = async () => {
@@ -69,32 +73,35 @@ function App() {
   };
   return (
     <>
-      <Header />
-      <div className="container-fluid">
-        <div className="row">
-          <Sidebar />
-          <main className="col-md-9 ms-sm-auto col-lg-10 px-md-4">
-            <Routes>
-              <Route path="/" element={<h1>Home Page</h1>} />
-              <Route path="admin" element={<DashboardPage />} />
-              <Route
-                path="admin/products"
-                element={
-                  <ProductPage products={products} onRemove={onHandleRemove} />
-                }
-              />
-              <Route
-                path="admin/products/add"
-                element={<ProductAddPage onAdd={onHandleAdd} />}
-              />
-              <Route
-                path="admin/products/:id/edit"
-                element={<ProductEditPage onUpdate={onHandleUpdate} />}
-              />
-            </Routes>
-          </main>
-        </div>
-      </div>
+      {/* Clients */}
+      <Routes>
+        <Route path="/" element={<LayoutWebsite />}>
+          <Route path="" element={<Overview products={products} />} />
+          <Route path="abouts" element={<h1>Abouts page</h1>} />
+          <Route
+            path="products"
+            element={<ProductWebsite products={products} />}
+          />
+        </Route>
+        {/* Admin */}
+        <Route path="admin" element={<LayoutAdmin />}>
+          <Route path="" element={<DashboardPage />} />
+          <Route
+            path="products"
+            element={
+              <ProductPage products={products} onRemove={onHandleRemove} />
+            }
+          />
+          <Route
+            path="products/add"
+            element={<ProductAddPage onAdd={onHandleAdd} />}
+          />
+          <Route
+            path="products/:id/edit"
+            element={<ProductEditPage onUpdate={onHandleUpdate} />}
+          />
+        </Route>
+      </Routes>
       <ToastContainer />
     </>
   );
