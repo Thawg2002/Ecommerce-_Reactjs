@@ -26,6 +26,7 @@ const ProductPage = ({ products, onRemove }) => {
               <th scope="col">Anh sản phẩm</th>
               <th scope="col">Tên sản phẩm</th>
               <th scope="col">Giá sản phẩm</th>
+              <th scope="col">Loại</th>
               <th scope="col">Mô tả sản phẩm</th>
               <th scope="col"></th>
             </tr>
@@ -42,6 +43,9 @@ const ProductPage = ({ products, onRemove }) => {
                 </td>
                 <td>
                   <span>{product.price}</span>
+                </td>
+                <td>
+                  <p>{product.productType}</p>
                 </td>
                 <td>
                   <p>{product.desscription}</p>

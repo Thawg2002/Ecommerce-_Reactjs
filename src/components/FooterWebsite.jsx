@@ -2,9 +2,8 @@ import React from "react";
 
 const FooterWebsite = () => {
   return (
-    <div>
-      {" "}
-      <footer className="container py-5">
+    <div className="footerWebsite">
+      <footer className="container py-5 ">
         <div className="row">
           <div className="col-12 col-md">
             <svg

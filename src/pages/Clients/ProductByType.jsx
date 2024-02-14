@@ -1,14 +1,12 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-const ProductWebsite = ({ products }) => {
-  const displayedProducts = products.slice(0, 8);
+const ProductByType = ({ productsByType }) => {
   return (
     <>
       <div className="product-main">
-        <h2> Sản phẩm</h2>
         <div className="row producWsite">
-          {displayedProducts.map((product, index) => {
+          {productsByType.map((product, index) => {
             return (
               <div key={index} className="col">
                 <Link to={`/products/${product.id}`}>
@@ -28,4 +26,4 @@ const ProductWebsite = ({ products }) => {
   );
 };
 
-export default ProductWebsite;
+export default ProductByType;

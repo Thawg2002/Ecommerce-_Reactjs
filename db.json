@@ -5,7 +5,9 @@
       "name": "Product A ",
       "image": "https://picsum.photos/300/300",
       "price": 100,
-      "desscription": "dâdwa"
+      "desscription": "dâdwa9999",
+      "product_type": "Aó",
+      "productType": "Quần"
     },
     {
       "id": "2",
@@ -19,7 +21,62 @@
       "name": "Sản phẩm T1",
       "image": "https://picsum.photos/300/300",
       "price": "300000",
-      "desscription": "đây là sản phẩm mới T1"
+      "desscription": "đây là sản phẩm mới T1",
+      "productType": "Áo"
+    },
+    {
+      "name": "Thang",
+      "image": [
+        "https://res.cloudinary.com/dtbgv9jja/image/upload/v1707769040/Assignment_React/elxzqdtsqpritldvpr2h.jpg"
+      ],
+      "price": "333333",
+      "id": "ejakIW8"
+    },
+    {
+      "name": "t4t 6647hhh",
+      "image": [
+        "https://res.cloudinary.com/dtbgv9jja/image/upload/v1707772672/Assignment_React/stjcdms28hn0524u435j.jpg"
+      ],
+      "price": "2222",
+      "id": "4kS6A-R"
+    },
+    {
+      "name": "nguyen thang",
+      "image": [
+        "https://res.cloudinary.com/dtbgv9jja/image/upload/v1707772686/Assignment_React/x5f4w2jxc0j5dzi0eyfv.jpg"
+      ],
+      "price": "4444",
+      "id": "LGefKzx",
+      "productType": "Quần",
+      "desscription": ""
+    },
+    {
+      "name": "nguyen thang",
+      "image": [
+        "https://res.cloudinary.com/dtbgv9jja/image/upload/v1707772701/Assignment_React/flessncrefjwiaev0gnd.jpg"
+      ],
+      "price": "4444",
+      "id": "aiI_upM"
+    },
+    {
+      "name": "nguyen thang3",
+      "image": [
+        "https://res.cloudinary.com/dtbgv9jja/image/upload/v1707772719/Assignment_React/dcrhccupnghaklldrndb.jpg"
+      ],
+      "price": "4444",
+      "id": "X3jXnhu",
+      "productType": "Quần",
+      "desscription": "njnjb"
+    },
+    {
+      "name": "t4t 6647hhh",
+      "image": [
+        "https://res.cloudinary.com/dtbgv9jja/image/upload/v1707940377/Assignment_React/sdoxptgyk4yupvisbexb.jpg"
+      ],
+      "price": "3333",
+      "productType": "Quần",
+      "id": "3KtEgxO",
+      "desscription": "fawffwagwg"
     }
   ],
   "menu": [
@@ -32,6 +89,28 @@
       "id": 2,
       "Label": "Sản Phẩm",
       "path": "/admin/products"
+    },
+    {
+      "id": 3,
+      "Label": "Về Website",
+      "path": "/"
+    }
+  ],
+  "users": [
+    {
+      "email": "thangijr@gmail.com",
+      "password": "$2a$10$G8QQyTbuQnkEa3E7ycHthOh5Cn7VlxHI4Zf5Y.mvYV9rMwsgn9g/q",
+      "id": 1
+    },
+    {
+      "email": "admin@gmail.com",
+      "password": "$2a$10$gPAaADWl7OakscnFbBLub.RYmopluloGPgQ3wc8uSieSzIb2Vk8I.",
+      "id": 2
+    },
+    {
+      "email": "thang20@gmail.com",
+      "password": "$2a$10$1.NXNYbUu.dt17BEbBG9b.cWKSQTpyUzMQJ2OQv1b9jWv6ouK9BHG",
+      "id": 3
     }
   ]
 }

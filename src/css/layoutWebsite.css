@@ -74,6 +74,132 @@
 
 .producWsite {
   margin: 0 auto;
-  width: 1400px;
+  margin-bottom: 50px;
+  width: 1300px;
   text-align: center;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+.producWsite a {
+  text-decoration: none;
+  color: #000;
+  font-size: 25px;
+}
+.producWsite img {
+  width: 100%;
+  height: 300px;
+  padding: 20px;
+  object-fit: cover;
+}
+.product-main > h2 {
+  text-align: center;
+  margin-top: 20px;
+}
+
+/* Signin */
+.form-signin {
+  margin: 50px auto;
+  width: 600px;
+}
+.form-signin h2 {
+  margin-bottom: 50px;
+}
+/* FooterWebsite */
+.footerWebsite {
+  border-top: 1px solid #ccc;
+}
+/*  */
+/* CSS */
+/* Ẩn danh sách dropdown ban đầu */
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  padding: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Hiển thị danh sách dropdown khi phần tử cha được hover */
+.dropdown:hover .dropdown-menu {
+  display: block;
+}
+
+/* Banner */
+
+.slide-container {
+  margin: 0 100px;
+}
+/* Sản phẩm chi tiết */
+.productdetail {
+  width: 1100px;
+  margin: 50px auto;
+  padding: 0 50px;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  grid-gap: 50px;
+}
+.productdetail-left img {
+  width: 100%;
+}
+.productdetail-right {
+  margin-left: 30px;
+}
+.productdetail-right p {
+  /* color: red;
+  background: #f0eeee;
+  padding: 10px; */
+  font-size: 25px;
+}
+.productdetail-right button {
+  margin: 5px;
+}
+.info-transport {
+  display: flex;
+  margin-bottom: 24px;
+}
+.info-transport_item {
+  display: grid;
+  /* display: -ms-grid; */
+  grid-template-columns: auto 1fr;
+  margin-left: 20px;
+}
+.info-transport_item img {
+  width: 20px;
+  /* margin: 0 auto; */
+  height: 20px;
+}
+.info-size {
+  display: flex;
+  margin-bottom: 24px;
+}
+.info-size_item {
+  margin-left: 69px;
+}
+.info-size_item button {
+  /* margin: 0 50px; */
+  width: 76px;
+  height: 32px;
+  background: #fff;
+  border: 1px solid;
+}
+.info-size_item button:active {
+  border: 1px solid red;
+}
+.info-size_item select {
+  width: 69px;
+}
+
+.productdetail-describe {
+  width: 1100px;
+  margin: 50px auto;
+  height: auto;
+}
+.productByType {
+  width: 1300px;
+  margin: 0 auto;
+  padding: 0 50px;
+}
+.productByType h6 {
+  padding: 0 50px;
 }

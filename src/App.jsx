@@ -17,6 +17,11 @@ import ProductAddPage from "./pages/admin/product-add";
 import ProductEditPage from "./pages/admin/product-edit";
 import Overview from "./pages/Clients/Overview";
 import ProductWebsite from "./pages/Clients/ProductWebsite";
+import ProductDetailPage from "./pages/Clients/ProductDetailPage";
+import Signin from "./pages/Signin";
+import Signup from "./pages/Signup";
+import ProductAllWebsite from "./pages/Clients/ProductAllWebsite";
+// import "../src/css/layoutWebsite.css";
 
 function App() {
   const [products, setProducts] = useState([]);
@@ -57,6 +62,7 @@ function App() {
       toast.error(error);
     }
   };
+
   //Update SP
   const onHandleUpdate = async (product) => {
     try {
@@ -80,8 +86,14 @@ function App() {
           <Route path="abouts" element={<h1>Abouts page</h1>} />
           <Route
             path="products"
-            element={<ProductWebsite products={products} />}
+            element={<ProductAllWebsite products={products} />}
           />
+          <Route
+            path="products/:id"
+            element={<ProductDetailPage products={products} />}
+          />
+          <Route path="signup" element={<Signup />} />
+          <Route path="signin" element={<Signin />} />
         </Route>
         {/* Admin */}
         <Route path="admin" element={<LayoutAdmin />}>

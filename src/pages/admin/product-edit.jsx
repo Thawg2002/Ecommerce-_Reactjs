@@ -10,11 +10,13 @@ const ProductEditPage = ({ onUpdate }) => {
   useEffect(() => {
     (async () => {
       const data = await getProductById(id);
+      console.log(data);
       reset(data);
     })();
   }, [id]);
   const onSubmit = (data) => {
     onUpdate(data);
+    console.log(data);
     navigate("/admin/products");
   };
   return (
@@ -60,6 +62,19 @@ const ProductEditPage = ({ onUpdate }) => {
           id="productPrice"
           className="form-control"
         />
+        <label htmlFor="productPrice" className="form-label">
+          Loại sản phẩm
+        </label>
+        <select
+          name="productType"
+          id="productType"
+          {...register("productType")}
+        >
+          <option value=""></option>
+          <option value="Áo">Áo</option>
+          <option value="Quần">Quần</option>
+        </select>
+        <br />
         <label htmlFor="productDesc" className="form-label">
           Mô tả sản phẩm
         </label>

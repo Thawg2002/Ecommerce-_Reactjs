@@ -22,7 +22,7 @@ export const removeProductById = async (id) => {
   } catch (error) {
     console.log(error);
   }
-};
+};  
 export const addProducts = async (product) => {
   try {
     const { data } = await instance.post("/products", product);
