@@ -3,18 +3,25 @@
     {
       "id": "1",
       "name": "Product A ",
-      "image": "https://picsum.photos/300/300",
+      "image": "https://res.cloudinary.com/dtbgv9jja/image/upload/v1708281918/Assignment_React/caqy0q8hd0whyv7tzvee.jpg",
       "price": 100,
-      "desscription": "dâdwa9999",
+      "desscription": "dâdwa999902002",
       "product_type": "Aó",
-      "productType": "Quần"
+      "productType": "Quần",
+      "newImage": {
+        "0": {}
+      }
     },
     {
       "id": "2",
       "name": "Product Bff",
-      "image": "https://picsum.photos/300/300",
+      "image": "https://res.cloudinary.com/dtbgv9jja/image/upload/v1708281936/Assignment_React/m6kf5yvpbdpkxjqkstit.jpg",
       "price": 200,
-      "desscription": ""
+      "desscription": "",
+      "newImage": {
+        "0": {}
+      },
+      "productType": ""
     },
     {
       "id": "914e",
@@ -69,14 +76,15 @@
       "desscription": "njnjb"
     },
     {
-      "name": "t4t 6647hhh",
-      "image": [
-        "https://res.cloudinary.com/dtbgv9jja/image/upload/v1707940377/Assignment_React/sdoxptgyk4yupvisbexb.jpg"
-      ],
-      "price": "3333",
+      "name": "sanpham22",
+      "price": "4429",
       "productType": "Quần",
-      "id": "3KtEgxO",
-      "desscription": "fawffwagwg"
+      "id": "jeNC7Zv",
+      "newImage": {
+        "0": {}
+      },
+      "desscription": "faaef",
+      "image": "https://res.cloudinary.com/dtbgv9jja/image/upload/v1708282090/Assignment_React/oegvi8jmqmvxjuopcqut.jpg"
     }
   ],
   "menu": [
@@ -111,6 +119,11 @@
       "email": "thang20@gmail.com",
       "password": "$2a$10$1.NXNYbUu.dt17BEbBG9b.cWKSQTpyUzMQJ2OQv1b9jWv6ouK9BHG",
       "id": 3
+    },
+    {
+      "email": "thang00@gmail.com",
+      "password": "$2a$10$OBO1WcsO91etQIeIfomjS.YYjeF8UVDJbd1cdop1.lHnh57dFkuD.",
+      "id": 4
     }
   ]
 }

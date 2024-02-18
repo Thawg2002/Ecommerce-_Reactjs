@@ -51,12 +51,12 @@ const ProductAddPage = ({ onAdd }) => {
 
       urls.push(response.data.secure_url);
     }
-    console.log(urls);
+    // console.log(urls);
     return urls;
   };
 
   return (
-    <form onSubmit={handleSubmit(onSubmit)}>
+    <form onSubmit={handleSubmit(onSubmit)} enctype="multipart/form-data">
       <div className="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
         <h1 className="h2">Thêm sản phẩm</h1>
         <div className="btn-toolbar mb-2 mb-md-0">

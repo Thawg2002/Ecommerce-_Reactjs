@@ -4,11 +4,11 @@ import { Slide } from "react-slideshow-image";
 import "react-slideshow-image/dist/styles.css";
 
 const Overview = ({ products }) => {
-  const spanStyle = {
-    padding: "20px",
-    background: "#efefef",
-    color: "#000000",
-  };
+  // const spanStyle = {
+  //   padding: "20px",
+  //   background: "#efefef",
+  //   color: "#000000",
+  // };
 
   const divStyle = {
     display: "flex",
@@ -16,7 +16,7 @@ const Overview = ({ products }) => {
     justifyContent: "center",
     backgroundSize: "cover",
     height: "700px",
-    backgroundSize: "cover",
+    // backgroundSize: "cover",
   };
   const slideImages = [
     {

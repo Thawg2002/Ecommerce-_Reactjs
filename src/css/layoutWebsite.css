@@ -203,3 +203,6 @@
 .productByType h6 {
   padding: 0 50px;
 }
+.text-decoration {
+  text-decoration: none;
+}

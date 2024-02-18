@@ -1,23 +1,61 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { useForm } from "react-hook-form";
 import { Link, useNavigate, useParams } from "react-router-dom";
 import { getProductById } from "../../api/product";
+import axios from "axios";
 
 const ProductEditPage = ({ onUpdate }) => {
   const { id } = useParams();
   const { register, handleSubmit, reset } = useForm();
+  const [currentImage, setCurrentImage] = useState("");
+
   const navigate = useNavigate();
   useEffect(() => {
     (async () => {
       const data = await getProductById(id);
-      console.log(data);
+      setCurrentImage(data.image);
+      // console.log(data.image);
       reset(data);
     })();
   }, [id]);
-  const onSubmit = (data) => {
-    onUpdate(data);
-    console.log(data);
+  const onSubmit = async (data) => {
+    // Xử lý hình ảnh mới
+    const newImageUrls = await handleUploadImage(data.newImage);
+    // console.log(newImageUrls);
+
+    // Cập nhật dữ liệu sản phẩm với hình ảnh mới
+    const updatedData = {
+      ...data,
+      image: newImageUrls[0], // Giả sử chỉ có một hình ảnh mới
+    };
+    // console.log(updatedData);
+    onUpdate(updatedData);
     navigate("/admin/products");
+  };
+  //Xử lý hình ảnh
+  const handleUploadImage = async (files) => {
+    const Cloud_name = "dtbgv9jja";
+    const Preset_name = "Assignment2_React";
+    const Folder_name = "Assignment_React";
+    const urls = [];
+    const api = `https://api.cloudinary.com/v1_1/${Cloud_name}/image/upload`;
+
+    const formData = new FormData();
+    formData.append("upload_preset", Preset_name);
+    formData.append("folder", Folder_name);
+    for (const file of files) {
+      formData.append("file", file);
+      // console.log(formData.append("file", file));
+      const response = await axios.put(api, formData, {
+        headers: {
+          "Content-Type": "multipart/form-data",
+        },
+      });
+
+      urls.push(response.data.secure_url);
+    }
+    // console.log(urls);
+    return urls;
   };
   return (
     <form onSubmit={handleSubmit(onSubmit)}>
@@ -47,12 +85,22 @@ const ProductEditPage = ({ onUpdate }) => {
         <label htmlFor="productImage" className="form-label">
           Anh sản phẩm
         </label>
+        <img
+          src={currentImage} // Thay data.image bằng đường dẫn đến hình ảnh hiện tại
+          alt="Current Product Image"
+          className="mb-3"
+          style={{ maxWidth: "300px" }} // Thiết lập kích thước hình ảnh
+        />
+        <br />
+        <label htmlFor="newImage" className="form-label">
+          Chọn hình ảnh mới
+        </label>
         <input
-          type="text"
-          {...register("image")}
-          id="productImage"
+          type="file"
+          {...register("newImage")}
+          id="newImage"
           className="form-control"
-        />{" "}
+        />
         <label htmlFor="productPrice" className="form-label">
           Gía sản phẩm
         </label>

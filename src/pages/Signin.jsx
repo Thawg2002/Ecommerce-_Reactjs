@@ -8,18 +8,20 @@ import { useLocalStorage } from "../hooks/useStorage";
 const Signin = () => {
   const { register, handleSubmit } = useForm();
   const navigate = useNavigate();
-  // const [user, setUser] = useLocalStorage("user", {});
+  const [user, setUser] = useLocalStorage("user", {});
 
   const onSubmit = async (data) => {
     try {
       const response = await onHandleSignin(data);
-      // setUser(response);
 
       if (response && response.user) {
         // console.log(response.user);
+        setUser(response.user);
         toast.success("Đăng nhập thành công");
         // Chuyển hướng đến trang chính sau khi đăng nhập thành công
         // navigate("/");
+        // navigate("/", { replace: true });
+        // window.location.reload();
       } else {
         toast.error("Đăng nhập không thành công");
       }
@@ -30,7 +32,7 @@ const Signin = () => {
   };
   return (
     <div className="form-signin">
-      {/* {JSON.stringify(user)} */}
+      {JSON.stringify(user)}
       <h2>Đăng nhập</h2>
       <form onSubmit={handleSubmit(onSubmit)}>
         <div className="mb-3">
@@ -57,9 +59,15 @@ const Signin = () => {
           />
         </div>
 
-        <button type="submit" className="btn btn-primary">
-          Submit
-        </button>
+        <div>
+          <button type="submit" className="btn btn-primary">
+            Submit
+          </button>
+          <br />
+          <a href="/signup" style={{ float: "right" }}>
+            Bạn chưa có tài khoản
+          </a>
+        </div>
       </form>
     </div>
   );

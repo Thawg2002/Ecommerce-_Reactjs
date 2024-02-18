@@ -15,6 +15,7 @@ const ProductDetailPage = ({ products }) => {
   useEffect(() => {
     (async () => {
       const data = await getProductById(id);
+      // console.log(data);
       setProduct(data);
       if (products.length > 0) {
         const productsType = getProductsByType(products, data.productType, id);

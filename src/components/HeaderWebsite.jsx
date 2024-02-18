@@ -1,7 +1,22 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
+import { useLocalStorage } from "../hooks/useStorage";
 
 const HeaderWebsite = () => {
+  const [user] = useLocalStorage("user", {});
+  // console.log(user);
+  const isUserLoggedIn = Object.keys(user).length > 0;
+  // console.log(isUserLoggedIn);
+  const navigate = useNavigate();
+  const handleLogout = () => {
+    localStorage.removeItem("user");
+    // localStorage.setItem("user", "");
+
+    // window.location.reload();
+    // Chuyển hướng hoặc làm bất kỳ điều gì khác sau khi đăng xuất
+    navigate("/");
+  };
   return (
     <div>
       <header className="p-3 mb-3 border-bottom">
@@ -57,47 +72,57 @@ const HeaderWebsite = () => {
                 aria-label="Search"
               />
             </form>
-            <div className="dropdown text-end">
-              <a
-                href="#"
-                className="d-block link-body-emphasis text-decoration-none dropdown-toggle"
-                data-bs-toggle="dropdown"
-                aria-expanded="false"
-              >
-                <img
-                  src="https://github.com/mdo.png"
-                  alt="mdo"
-                  width={32}
-                  height={32}
-                  className="rounded-circle"
-                />
+            {user && isUserLoggedIn == true ? (
+              <div className="dropdown text-end">
+                <a
+                  href="#"
+                  className="d-block link-body-emphasis text-decoration-none dropdown-toggle"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  <img
+                    src="https://github.com/mdo.png"
+                    alt="mdo"
+                    width={32}
+                    height={32}
+                    className="rounded-circle"
+                  />
+                </a>
+                <ul className="dropdown-menu text-small">
+                  <li>
+                    <a className="dropdown-item" href="#">
+                      New project...
+                    </a>
+                  </li>
+                  <li>
+                    <a className="dropdown-item" href="#">
+                      Settings
+                    </a>
+                  </li>
+                  <li>
+                    <a className="dropdown-item" href="#">
+                      Profile
+                    </a>
+                  </li>
+                  <li>
+                    <hr className="dropdown-divider" />
+                  </li>
+                  <li>
+                    <a
+                      className="dropdown-item"
+                      href="/"
+                      onClick={handleLogout}
+                    >
+                      Sign out
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            ) : (
+              <a className="dropdown text-end text-decoration" href="/signin">
+                <h6>Đăng nhập</h6>
               </a>
-              <ul className="dropdown-menu text-small">
-                <li>
-                  <a className="dropdown-item" href="#">
-                    New project...
-                  </a>
-                </li>
-                <li>
-                  <a className="dropdown-item" href="#">
-                    Settings
-                  </a>
-                </li>
-                <li>
-                  <a className="dropdown-item" href="#">
-                    Profile
-                  </a>
-                </li>
-                <li>
-                  <hr className="dropdown-divider" />
-                </li>
-                <li>
-                  <a className="dropdown-item" href="#">
-                    Sign out
-                  </a>
-                </li>
-              </ul>
-            </div>
+            )}
           </div>
         </div>
       </header>
