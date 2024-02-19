@@ -3,7 +3,7 @@
     {
       "id": "1",
       "name": "Product A ",
-      "image": "https://res.cloudinary.com/dtbgv9jja/image/upload/v1708281918/Assignment_React/caqy0q8hd0whyv7tzvee.jpg",
+      "image": "https://res.cloudinary.com/dtbgv9jja/image/upload/v1708370565/Assignment_React/m8gy6homnluysqf6byed.jpg",
       "price": 100,
       "desscription": "dâdwa999902002",
       "product_type": "Aó",
@@ -15,7 +15,7 @@
     {
       "id": "2",
       "name": "Product Bff",
-      "image": "https://res.cloudinary.com/dtbgv9jja/image/upload/v1708281936/Assignment_React/m6kf5yvpbdpkxjqkstit.jpg",
+      "image": "https://res.cloudinary.com/dtbgv9jja/image/upload/v1708370578/Assignment_React/h1uwjk5qgmxtyj8d3dwr.jpg",
       "price": 200,
       "desscription": "",
       "newImage": {
@@ -26,54 +26,68 @@
     {
       "id": "914e",
       "name": "Sản phẩm T1",
-      "image": "https://picsum.photos/300/300",
+      "image": "https://res.cloudinary.com/dtbgv9jja/image/upload/v1708370586/Assignment_React/qcvc8zzqf0dk0vvppcoj.jpg",
       "price": "300000",
       "desscription": "đây là sản phẩm mới T1",
-      "productType": "Áo"
+      "productType": "Áo",
+      "newImage": {
+        "0": {}
+      }
     },
     {
       "name": "Thang",
-      "image": [
-        "https://res.cloudinary.com/dtbgv9jja/image/upload/v1707769040/Assignment_React/elxzqdtsqpritldvpr2h.jpg"
-      ],
+      "image": "https://res.cloudinary.com/dtbgv9jja/image/upload/v1708370602/Assignment_React/njpew8xdqkfkybaopw2i.jpg",
       "price": "333333",
-      "id": "ejakIW8"
+      "id": "ejakIW8",
+      "newImage": {
+        "0": {}
+      },
+      "productType": "",
+      "desscription": ""
     },
     {
       "name": "t4t 6647hhh",
-      "image": [
-        "https://res.cloudinary.com/dtbgv9jja/image/upload/v1707772672/Assignment_React/stjcdms28hn0524u435j.jpg"
-      ],
+      "image": "https://res.cloudinary.com/dtbgv9jja/image/upload/v1708370610/Assignment_React/glu8bixoacz0qsks9rgc.jpg",
       "price": "2222",
-      "id": "4kS6A-R"
-    },
-    {
-      "name": "nguyen thang",
-      "image": [
-        "https://res.cloudinary.com/dtbgv9jja/image/upload/v1707772686/Assignment_React/x5f4w2jxc0j5dzi0eyfv.jpg"
-      ],
-      "price": "4444",
-      "id": "LGefKzx",
-      "productType": "Quần",
+      "id": "4kS6A-R",
+      "newImage": {
+        "0": {}
+      },
+      "productType": "",
       "desscription": ""
     },
     {
       "name": "nguyen thang",
-      "image": [
-        "https://res.cloudinary.com/dtbgv9jja/image/upload/v1707772701/Assignment_React/flessncrefjwiaev0gnd.jpg"
-      ],
+      "image": "https://res.cloudinary.com/dtbgv9jja/image/upload/v1708370621/Assignment_React/yowrbdqkenhsurpdnyfe.jpg",
       "price": "4444",
-      "id": "aiI_upM"
+      "id": "LGefKzx",
+      "productType": "Quần",
+      "desscription": "",
+      "newImage": {
+        "0": {}
+      }
+    },
+    {
+      "name": "nguyen thang",
+      "image": "https://res.cloudinary.com/dtbgv9jja/image/upload/v1708370628/Assignment_React/pvojwd7zekptkiwr576t.jpg",
+      "price": "4444",
+      "id": "aiI_upM",
+      "newImage": {
+        "0": {}
+      },
+      "productType": "",
+      "desscription": ""
     },
     {
       "name": "nguyen thang3",
-      "image": [
-        "https://res.cloudinary.com/dtbgv9jja/image/upload/v1707772719/Assignment_React/dcrhccupnghaklldrndb.jpg"
-      ],
+      "image": "https://res.cloudinary.com/dtbgv9jja/image/upload/v1708370637/Assignment_React/pyhvtumtkwlhprofxunb.jpg",
       "price": "4444",
       "id": "X3jXnhu",
       "productType": "Quần",
-      "desscription": "njnjb"
+      "desscription": "njnjb",
+      "newImage": {
+        "0": {}
+      }
     },
     {
       "name": "sanpham22",
@@ -84,7 +98,7 @@
         "0": {}
       },
       "desscription": "faaef",
-      "image": "https://res.cloudinary.com/dtbgv9jja/image/upload/v1708282090/Assignment_React/oegvi8jmqmvxjuopcqut.jpg"
+      "image": "https://res.cloudinary.com/dtbgv9jja/image/upload/v1708370645/Assignment_React/hzgxkodukg1ojjhfpp82.jpg"
     }
   ],
   "menu": [

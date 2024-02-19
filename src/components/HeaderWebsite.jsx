@@ -10,8 +10,9 @@ const HeaderWebsite = () => {
   // console.log(isUserLoggedIn);
   const navigate = useNavigate();
   const handleLogout = () => {
-    localStorage.removeItem("user");
+    // localStorage.removeItem("user");
     // localStorage.setItem("user", "");
+    localStorage.clear();
 
     // window.location.reload();
     // Chuyển hướng hoặc làm bất kỳ điều gì khác sau khi đăng xuất

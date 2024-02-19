@@ -19,9 +19,9 @@ const Signin = () => {
         setUser(response.user);
         toast.success("Đăng nhập thành công");
         // Chuyển hướng đến trang chính sau khi đăng nhập thành công
-        // navigate("/");
         // navigate("/", { replace: true });
-        // window.location.reload();
+        window.location.reload();
+        // navigate("/");
       } else {
         toast.error("Đăng nhập không thành công");
       }

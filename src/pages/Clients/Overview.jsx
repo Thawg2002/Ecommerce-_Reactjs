@@ -20,11 +20,11 @@ const Overview = ({ products }) => {
   };
   const slideImages = [
     {
-      url: "https://images.unsplash.com/photo-1501813722636-45de2fe4f9b4?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      url: "https://intphcm.com/data/upload/banner-thoi-trang-nam-dep.jpg",
       caption: "Slide 1",
     },
     {
-      url: "https://images.unsplash.com/photo-1551488831-68b4d0c92c13?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      url: "https://cmon.vn/wp-content/uploads/2022/07/banner.webp",
       caption: "Slide 2",
     },
     {
