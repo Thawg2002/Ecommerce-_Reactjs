@@ -99,6 +99,26 @@
       },
       "desscription": "faaef",
       "image": "https://res.cloudinary.com/dtbgv9jja/image/upload/v1708370645/Assignment_React/hzgxkodukg1ojjhfpp82.jpg"
+    },
+    {
+      "name": "tnthng",
+      "image": [
+        "https://res.cloudinary.com/dtbgv9jja/image/upload/v1708418627/Assignment_React/aqmygqpy1dzsu6olpjde.jpg"
+      ],
+      "price": "3333",
+      "productType": "Ao",
+      "id": "KP7rWMb"
+    },
+    {
+      "name": "tnthng",
+      "image": "https://res.cloudinary.com/dtbgv9jja/image/upload/v1708418643/Assignment_React/ha3fgyvs0kltvx3clp5w.jpg",
+      "price": "3333",
+      "productType": "Ao",
+      "id": "AMmJinT",
+      "newImage": {
+        "0": {}
+      },
+      "desscription": ""
     }
   ],
   "menu": [

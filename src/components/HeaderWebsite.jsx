@@ -7,13 +7,13 @@ const HeaderWebsite = () => {
   const [user] = useLocalStorage("user", {});
   // console.log(user);
   const isUserLoggedIn = Object.keys(user).length > 0;
+  const idUser = user.id;
   // console.log(isUserLoggedIn);
   const navigate = useNavigate();
   const handleLogout = () => {
     // localStorage.removeItem("user");
     // localStorage.setItem("user", "");
     localStorage.clear();
-
     // window.location.reload();
     // Chuyển hướng hoặc làm bất kỳ điều gì khác sau khi đăng xuất
     navigate("/");
@@ -105,6 +105,15 @@ const HeaderWebsite = () => {
                       Profile
                     </a>
                   </li>
+                  {idUser === 1 ? (
+                    <li>
+                      <Link className="dropdown-item" to="/admin">
+                        Vào Admin
+                      </Link>
+                    </li>
+                  ) : (
+                    ""
+                  )}
                   <li>
                     <hr className="dropdown-divider" />
                   </li>
